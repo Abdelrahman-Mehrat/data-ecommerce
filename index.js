@@ -10,8 +10,9 @@ app.get("/", (req, res) => {
 app.get("/products", (req, res) => {
   res.send(products);
 });
-app.get(`/products/${category}`, (req, res) => {
-  res.send(products);
+app.get(`/products/:id`, (req, res) => {
+  let idNum=req.params.id
+  res.send(products[idNum-1]);
 });
 const port = process.env.port || 5000;
 app.listen(port, console.log("Welcome Abdo on port 5000"));
