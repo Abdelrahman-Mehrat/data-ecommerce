@@ -4,9 +4,9 @@ const app = express();
 const products = require("./products");
 app.use(express.json());
 app.use(cors());
-app.get("/", (req, res) => {
-  res.send("welcome to our online shop");
-});
+// app.get("/", (req, res) => {
+//   res.send("welcome to our online shop");
+// });
 app.get("/products", (req, res) => {
   res.send(products);
 });
