@@ -10,8 +10,9 @@ app.get("/", (req, res) => {
 app.get("/products", (req, res) => {
   res.send(products);
 });
-app.get(`/products/:id`, (req, res) => {
+app.get(`/homeproduct/products/:id`, (req, res) => {
   let idNum=req.params.id
+  console.log(idNum);
   res.send(products[idNum-1]);
 });
 const port = process.env.port || 5000;
