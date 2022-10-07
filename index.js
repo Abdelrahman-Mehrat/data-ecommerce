@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.status.json({status:"success",data:products});
+  res.status(200).json({status:"success",data: products});
 });
 
 app.get("/products", (req, res) => {
